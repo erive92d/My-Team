@@ -7,6 +7,7 @@ const Intern = require("./lib/intern");
 const managerAccount = new Manager("Deorren", 26, "erive92d@gmail.com", 8127);
 
 
+
 //ADD MEMBERS
 function choiceAdd() {
   inquirer
@@ -186,7 +187,7 @@ const internMaker = function (member) {
       member.email,
       school.school
     );
-    console.log(newIntern.getRoles());
+    console.log(newIntern);
   });
 };
 
