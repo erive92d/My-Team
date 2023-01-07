@@ -1,0 +1,26 @@
+{
+  "name": "my-team",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erive92d/My-Team.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erive92d/My-Team/issues"
+  },
+  "homepage": "https://github.com/erive92d/My-Team#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
