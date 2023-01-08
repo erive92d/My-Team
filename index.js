@@ -6,9 +6,11 @@ const Intern = require("./lib/intern");
 
 const managerAccount = new Manager("Deorren", 26, "erive92d@gmail.com", 8127);
 
+//Team members in Array
+let storeInfos = [managerAccount]
 
 
-//ADD MEMBERS
+
 function choiceAdd() {
   inquirer
     .prompt({
@@ -127,14 +129,19 @@ const addTeam = () => {
   inquirer.prompt(questions).then((answers) => {
     //SELECTS WHICH ROLE WE SHOULD MAKE
     if (answers.role === "Engineer") {
-      engineerMaker(answers);
+      console.log(`You've selected ${answers.role}`)
+      engineerMaker(answers)
     } else if (answers.role === "Intern") {
-      internMaker(answers);
+        console.log(`You've selected ${answers.role}`)
+        internMaker(answers)
+       
     } else {
       console.log("Doesnt exist");
     }
   });
 };
+
+
 
 const engineerMaker = function (member) {
   console.log(
@@ -159,7 +166,10 @@ const engineerMaker = function (member) {
       member.email,
       answers.github
     );
-    console.log(newEngineer);
+    storeInfos.push(newEngineer)
+    addMore()
+    
+    
   });
 };
 
@@ -187,8 +197,31 @@ const internMaker = function (member) {
       member.email,
       school.school
     );
-    console.log(newIntern);
+    storeInfos.push(newIntern)
+    addMore()
+    
+   
   });
+ 
 };
+const addMore = () => {
+    inquirer.prompt({
+        type:'confirm',
+        message:'Would you like to add more members?',
+        name:'addmore'
+        
+    })
+    .then((answer)=>{
+        if(answer.addmore) {
+            return addTeam()
+        } else {
+            console.log(storeInfos)
+        }
+    })
+   
+}
+
+
+
 
 selectRole();
