@@ -1,6 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    background: orange;
+    font-weight: bold;
+    font-size: 150%;
+}
+
 body {
-    background-color: white;
+    background-color: black;
+    font-family: monospace;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    background: black;
+    color:white;
 }
 .container {
-    margin: 5%;
+    background:blue;
+    margin: 1%;
+   
+    width: 50%;
+}
+.info {
+    font-size: 150%;
+    text-align: center;
+}
+.title {
+    font-size: 200%;
+    text-align:center;
+    background: red;
+    width: 100%;
+}
+.intern {
+    background: yellow;
+    color: black;
+}
+.manager {
+    background: green;
 }
