@@ -8,14 +8,29 @@ nav {
     justify-content: center;
     align-items: center;
     height: 20vh;
-    background: orange;
+    width:100%;
+    background: white;
     font-weight: bold;
     font-size: 150%;
+    color:#1b74e4;
+    margin-bottom: 2%;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+nav h1 {
+    background:#1b74e4;
+    color:white;
+    padding: 1%;
+    width: 50%;
+    text-align:center;
+    border-radius: 10px;
 }
 
 body {
-    background-color: black;
+    background-color: #f0f2f5;
     font-family: monospace;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
 
 }
 
@@ -23,29 +38,71 @@ main {
     display: flex;
     flex-direction: column;
     align-items:center;
-    background: black;
-    color:white;
+    justify-content:center;
+    background: white;
+    width: 60%;
+    color:#1b74e4;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 .container {
-    background:blue;
+    background:#f0f2f5;
     margin: 1%;
-   
-    width: 50%;
+    display: flex;
+    width: 70%;
+    height: 10vh;
+    border-top-right-radius: 10px;
+    
 }
 .info {
-    font-size: 150%;
-    text-align: center;
+    font-size: 120%;
+    color:#444950;
+    font-weight:700;
+    
+}
+.info a {
+    text-decoration:none;
+    color:#444950;
+}
+.info a:hover {
+    color:white;
+}
+.info-card {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    margin-left: 2%;
+    
+    
 }
 .title {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
     font-size: 200%;
-    text-align:center;
-    background: red;
-    width: 100%;
-}
-.intern {
-    background: yellow;
-    color: black;
+    background:#1b74e4;
+    color:white;
+    width: 50%;
+    border-bottom-left-radius: 10px;
 }
 .manager {
-    background: green;
+    border-right: 4px solid red;
+}
+.intern {
+    border-right: 4px solid green;
+}
+.engineer {
+    border-right: 4px solid blue;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;  
+    text-align: center;
+}
+footer a {
+    color:black;
 }

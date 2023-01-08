@@ -32,7 +32,7 @@ function choiceAdd() {
         //if true, add team member, else do nothing
         addTeam();
       } else {
-        console.log("Welcome");
+        console.log('Welcome');
       }
     });
 }

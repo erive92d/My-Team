@@ -12,42 +12,43 @@
       <h1>My Software Development Team</h1>
     </nav>
     <main>
-      <% data.forEach((item)=> { %>
-        
-        <% if(item.getRole() === 'Manager') {%>
-           <div class="container manager">
-               <div class="title"><%= item.getRole()%></div>
-               <div class="info name">Name: <%= item.name%></div>
-               <div class="info id">ID: <%= item.id%></div>
-               <div class="info email">Email: <%= item.email%></div>
-               <div class="info office">Office: <%= item.officenum %></div>
-             </div>
-        <%} %>
-        <% if(item.getRole() === 'Engineer') {%>
-           <div class="container engineer">
-               <div class="title"><%= item.getRole()%></div>
-               <div class="info name">Name: <%= item.name%></div>
-               <div class="info id">ID: <%= item.id%></div>
-               <div class="info email">Email: <%= item.email%></div>
-               <div class="info github">Github: <%= item.github %></div>
-             </div>
-        <%} %>
-        <% if(item.getRole() === 'Intern') {%>
-           <div class="container intern">
-               <div class="title "><%= item.getRole()%></div>
-               <div class="info name">Name: <%= item.name%></div>
-               <div class="info id">ID: <%= item.id%></div>
-               <div class="info email">Email: <%= item.email%></div>
-               <div class="info school">School: <%= item.school %></div>
-             </div>
-        <%} %>
-       
-   
-       <%})%>
-   
-
-
+      <% data.forEach((item)=> { %> <% if(item.getRole() === 'Manager') {%>
+      <div class="container manager">
+        <div class="title"><%= item.getRole()%></div>
+        <div class="info-card">
+          <div class="info name">Name: <%= item.name%></div>
+          <div class="info id">ID: <%= item.id%></div>
+          <div class="info email">Email: <a href=> <%= item.email%></a></div>
+          <div class="info office">Office: <%= item.officenum %></div>
+        </div>
+      </div>
+      <%} %> <% if(item.getRole() === 'Engineer') {%>
+      <div class="container engineer">
+        <div class="title"><%= item.getRole()%></div>
+        <div class="info-card">
+          <div class="info name">Name: <%= item.name%></div>
+          <div class="info id">ID: <%= item.id%></div>
+          <div class="info email">Email: <a href=> <%= item.email%></a></div>
+          <div class="info github">Github: <a href=> <%= item.github%></a></div>
+        </div>
+      </div>
+      <%} %> <% if(item.getRole() === 'Intern') {%>
+      <div class="container intern">
+        <div class="title"><%= item.getRole()%></div>
+        <div class="info-card">
+          <div class="info name">Name: <%= item.name%></div>
+          <div class="info id">ID: <%= item.id%></div>
+          <div class="info email">Email: <a href=> <%= item.email%></a></div>
+          <div class="info school">School: <%= item.school %></div>
+        </div>
+      </div>
+      <%} %> <%})%>
     </main>
-    
+    <footer>
+      <p>Created by Deorren Erive</p>
+      <a href="https://github.com/erive92d" target="__blank">Github</a>
+      <a href="https://www.linkedin.com/in/deorren-erive-1aa581236/" target="__blank">LinkedIn</a>
+      
+    </footer>
   </body>
 </html>
