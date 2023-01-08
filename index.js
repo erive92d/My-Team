@@ -3,6 +3,7 @@ const Employee = require("./lib/employee");
 const Manager = require("./lib/manager");
 const Engineer = require("./lib/engineer");
 const Intern = require("./lib/intern");
+const server = require("./server")
 
 const managerAccount = new Manager("Deorren", 26, "erive92d@gmail.com", 8127);
 
@@ -215,7 +216,7 @@ const addMore = () => {
         if(answer.addmore) {
             return addTeam()
         } else {
-            console.log(storeInfos)
+            server(storeInfos)
         }
     })
    
